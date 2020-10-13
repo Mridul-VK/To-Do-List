@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <title>To Do List</title>
+    <style>
+        * {
+            user-select: none;
+        }
+
+        #searchBar:focus {
+            box-shadow: none;
+        }
+
+        #taskInput:focus {
+            box-shadow: none;
+            border-color: lightgrey;
+        }
+
+        #btnsBelowInputDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #errTxtDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -1rem;
+            margin-bottom: 0.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="display: flex; align-items: center; justify-content: space-between;">
+        <h1 style="color: white;">To Do List</h1>
+        <form class="form-inline my-2 my-lg-0" autocomplete="off">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+        </form>
+    </nav><br>
+    <div class="container">
+
+        <div class="input-group mb-2">
+            <input type="text" class="form-control" placeholder="Enter a task" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" id="taskInput">&nbsp;&nbsp;
+            <input type="hidden" id="saveIndex"><br>
+        </div>
+        <div class="input-group-append" id="btnsBelowInputDiv">
+            <button class="btn btn-primary btn-success " id="add_btn" style="margin: 0;border-radius: 8px;">Add
+                Task</button>&nbsp;
+            <button class="btn btn-primary btn-success " id="save_btn"
+                style="margin: 0; display:none; border-radius: 8px;">Update</button>&nbsp;
+            <button class="btn btn-primary btn-danger " id="deleteAll_btn" style="margin: 0; border-radius: 8px;">Delete
+                All</button>
+        </div><br>
+        <div id="errTxtDiv">
+            <small id="errTxt"><br></small>
+        </div>
+        <div id="taskTableDiv">
+            <table class="table" id="taskListTable"></table>
+        </div>
+    </div>
+    <script src="11_(!Assignment)ToDoListJs.js"></script>
+
+</body>
+
+</html>
